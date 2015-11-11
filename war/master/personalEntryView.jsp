@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=MS932" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>ユーザー登録</title>
 </head>
 <body>
