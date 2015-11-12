@@ -9,5 +9,6 @@ function perAnalysis() {
 
 function perDataChange() {
 	alert("perDataChange");
+	window.location.href = '../main/PersonalEntryView';
 }
 

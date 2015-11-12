@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
-public class personalentryTest extends AppEngineTestCase {
+public class PersonalEntryTest extends AppEngineTestCase {
 
     private PersonalEntryService service = new PersonalEntryService();
 
@@ -20,36 +20,36 @@ public class personalentryTest extends AppEngineTestCase {
         
         List<PersonModel> personList = service.getAll(); 
         // ========== assertion start ========== //
-        // ‰‰ñ‚Í0Œ‚Å‚ ‚é‚±‚Æ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚±ï¿½ï¿½
         assertNotNull(personList);
         assertTrue(personList.isEmpty());
         // ========== assertion end ========== //
         
-        // ƒ†[ƒU[‚Ìì¬
+        // ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Ìì¬
         PersonModel personData = new PersonModel();
         personData.setUserId("wondringwonder@gmail.com");
-        personData.setUserName("ƒeƒXƒgƒ†[ƒU[");
+        personData.setUserName("ï¿½eï¿½Xï¿½gï¿½ï¿½ï¿½[ï¿½Uï¿½[");
         personData.setMailto("wondringwonder@gmail.com");
         personData.setBumon("B001");
         personData.setTeam("T001");
         personData.setOther("");
         personData.setUserCode("342");
         
-        // ƒf[ƒ^ƒXƒgƒA‚ÖXV
+        // ï¿½fï¿½[ï¿½^ï¿½Xï¿½gï¿½Aï¿½ÖXï¿½V
         service.insert(personData);
         
-        // ƒf[ƒ^“o˜^‚³‚ê‚Ä‚¢‚é–
+        // ï¿½fï¿½[ï¿½^ï¿½oï¿½^ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é–
         personList = service.getAll();
         // ========== assertion start ========== //
-        // ‰‰ñ‚Í0Œ‚Å‚ ‚é‚±‚Æ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚±ï¿½ï¿½
         assertNotNull(personList);
         assertTrue(personList.size() == 1);
         // ========== assertion end ========== //
         
-        // ˆÈ~A1Œ‚Ì’†g‚Ìƒ`ƒFƒbƒN
+        // ï¿½È~ï¿½A1ï¿½ï¿½ï¿½Ì’ï¿½ï¿½gï¿½Ìƒ`ï¿½Fï¿½bï¿½N
         PersonModel storedPerson = personList.get(0);
         assertNotNull(storedPerson);
-        // ƒ†[ƒU[IDAƒ†[ƒU[–¼Aƒ[ƒ‹ƒAƒhƒŒƒXA•”–åƒR[ƒhAƒ`[ƒ€ƒR[ƒhA‚»‚Ì‘¼ƒR[ƒhAƒ†[ƒU[ƒR[ƒh‚ª³‚µ‚­•Û‘¶‚³‚ê‚Ä‚¢‚é‚©
+        // ï¿½ï¿½ï¿½[ï¿½Uï¿½[IDï¿½Aï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½Aï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½Aï¿½`ï¿½[ï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½Aï¿½ï¿½ï¿½Ì‘ï¿½ï¿½Rï¿½[ï¿½hï¿½Aï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Rï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û‘ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚©
         assertEquals(personData.getUserId(), storedPerson.getUserId());
         assertEquals(personData.getUserName(), storedPerson.getUserName());
         assertEquals(personData.getMailto(), storedPerson.getMailto());
@@ -61,39 +61,39 @@ public class personalentryTest extends AppEngineTestCase {
         // ========== assertion end ========== //
         
         // ===================================== 
-        // XVƒeƒXƒg 
+        // ï¿½Xï¿½Vï¿½eï¿½Xï¿½g 
         // ===================================== 
-        // ‹L–‚Ì•ÏX 
-        personData.setUserName("XVƒ†[ƒU[‚P");
-        // ƒf[ƒ^ƒXƒgƒA‚Öã‘‚«XV 
+        // ï¿½Lï¿½ï¿½ï¿½Ì•ÏX 
+        personData.setUserName("ï¿½Xï¿½Vï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½P");
+        // ï¿½fï¿½[ï¿½^ï¿½Xï¿½gï¿½Aï¿½Öã‘ï¿½ï¿½ï¿½Xï¿½V 
         service.update(personData);
-        // XVŒã‚Ìƒf[ƒ^ˆê——‚Ìæ“¾ 
+        // ï¿½Xï¿½Vï¿½ï¿½Ìƒfï¿½[ï¿½^ï¿½ê——ï¿½Ìæ“¾ 
         personList = service.getAll();
         // ========== assertion start ========== // 
-        // XVŒã‚Ìƒf[ƒ^‚Í1Œ‚Å‚ ‚é‚±‚Æ 
+        // ï¿½Xï¿½Vï¿½ï¿½Ìƒfï¿½[ï¿½^ï¿½ï¿½1ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚±ï¿½ï¿½ 
         assertNotNull(personList);
         assertTrue(personList.size() == 1);
-        // ˆÈ~A1Œ‚Ì’†g‚Ìƒ`ƒFƒbƒN 
+        // ï¿½È~ï¿½A1ï¿½ï¿½ï¿½Ì’ï¿½ï¿½gï¿½Ìƒ`ï¿½Fï¿½bï¿½N 
         PersonModel updatedPerson = personList.get(0);
-        // C³‚µ‚½Person‚ÆAXVŒãÄæ“¾‚µ‚½Person‚ª“™‚µ‚¢‚±‚Æ 
+        // ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Personï¿½ÆAï¿½Xï¿½Vï¿½ï¿½Äæ“¾ï¿½ï¿½ï¿½ï¿½Personï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
         assertEqualsPerson(personData, updatedPerson);
-        // ã‘‚«XV‚µ‚½‚Ì‚Åƒo[ƒWƒ‡ƒ“‚ª2‚É‚È‚Á‚Ä‚¢‚é‚±‚Æ 
+        // ï¿½ã‘ï¿½ï¿½ï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Ì‚Åƒoï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½É‚È‚ï¿½ï¿½Ä‚ï¿½ï¿½é‚±ï¿½ï¿½ 
         assertEquals(updatedPerson.getVersion(), Long.valueOf(2L));
         // ========== assertion end ========== //
         
         // ===================================== 
-        // ƒ†[ƒU[‚Ìíœ 
+        // ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Ìíœ 
         // ===================================== 
-        // ƒ†[ƒU[‚Ìíœ 
+        // ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½Ìíœ 
         service.delete(updatedPerson.getKey());
-        // íœŒã‚Ìƒ†[ƒU[‚Ìæ“¾ 
+        // ï¿½íœï¿½ï¿½Ìƒï¿½ï¿½[ï¿½Uï¿½[ï¿½Ìæ“¾ 
         storedPerson = service.get(updatedPerson.getKey());
-        // íœŒã‚Ì‹L–ˆê——‚Ìæ“¾ 
+        // ï¿½íœï¿½ï¿½Ì‹Lï¿½ï¿½ï¿½ê——ï¿½Ìæ“¾ 
         personList   = service.getAll();
         // ========== assertion start ========== // 
-        // ‚±‚Ì‹L–‚Ííœ‚³‚ê‚Ä‚¢‚é‚Ì‚ÅNull‚Å‚ ‚é‚±‚Æ 
+        // ï¿½ï¿½ï¿½Ì‹Lï¿½ï¿½ï¿½Ííœï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ì‚ï¿½Nullï¿½Å‚ï¿½ï¿½é‚±ï¿½ï¿½ 
         assertNull(storedPerson);
-        // ‹L–ˆê——‚Í‚OŒ‚ÌƒŠƒXƒg‚Å‚ ‚é‚±‚Æ 
+        // ï¿½Lï¿½ï¿½ï¿½ê——ï¿½Í‚Oï¿½ï¿½ï¿½Ìƒï¿½ï¿½Xï¿½gï¿½Å‚ï¿½ï¿½é‚±ï¿½ï¿½ 
         assertNotNull(personList);
         assertTrue(personList.isEmpty());
         // ========== assertion end ========== //         
@@ -101,10 +101,10 @@ public class personalentryTest extends AppEngineTestCase {
     }
     
     private void assertEqualsPerson(PersonModel person1, PersonModel person2) {
-        // ‹¤‚ÉNull‚Å‚Í‚È‚¢‚±‚Æ 
+        // ï¿½ï¿½ï¿½ï¿½Nullï¿½Å‚Í‚È‚ï¿½ï¿½ï¿½ï¿½ï¿½ 
         assertNotNull(person1);
         assertNotNull(person2);
-        // Šeƒf[ƒ^‚ª“™‚µ‚¢‚±‚Æ 
+        // ï¿½eï¿½fï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
         assertEquals(person1.getUserId(), person2.getUserId());
         assertEquals(person1.getUserName(), person2.getUserName());
         assertEquals(person1.getMailto(), person2.getMailto());

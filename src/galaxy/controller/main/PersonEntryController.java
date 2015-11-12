@@ -1,4 +1,4 @@
-package galaxy.controller.master;
+package galaxy.controller.main;
 
 import galaxy.model.PersonModel;
 import galaxy.service.PersonalEntryService;
@@ -19,7 +19,7 @@ public class PersonEntryController extends Controller {
         
         BeanUtil.copy(request, personData);
         
-        // ユーザーIDはGoogleアカウントIDにしたいな
+        // 繝�繧ｹ繝医ョ繝ｼ繧ｿ
         personData.setUserId("test@gmail.com");
         
         PersonalEntryService personService = new PersonalEntryService();

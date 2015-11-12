@@ -1,6 +1,9 @@
-package galaxy.controller.master;
+package galaxy.controller.main;
 
 import org.slim3.tester.ControllerTestCase;
+
+import galaxy.controller.main.PersonEntryController;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;

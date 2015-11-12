@@ -1,4 +1,4 @@
-package galaxy.controller.master;
+package galaxy.controller.main;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ public class PersonalEntryViewController extends Controller {
 
     @Override
     public Navigation run() throws Exception {
-        PersonalEntryService service = new PersonalEntryService();
-        List<PersonModel> personList = service.getAll();
-        requestScope("personList", personList);
-        return forward("personalEntryView.jsp");
+        //PersonalEntryService service = new PersonalEntryService();
+        //List<PersonModel> personList = service.getAll();
+        //requestScope("personList", personList);
+        return forward("PersonalEntryView.jsp");
     }
 }
