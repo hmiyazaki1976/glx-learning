@@ -18,7 +18,6 @@ public class PersonalEntryService {
     }
 
     public void insert(PersonModel personData) throws Exception {
-        // TODO Auto-generated method stub
         personData.setKey(Datastore.allocateId(PersonModelMeta.get()));
 
         Transaction tx = Datastore.beginTransaction();
