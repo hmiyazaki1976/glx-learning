@@ -1,7 +1,8 @@
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 /* commonなjs */
 var request;    // ←スクリプトエラーとならないように宣言
 var response;
+var incfile;
+			
 
 function include(filename) {
   include.seq = (include.seq)? include.seq + 1: 1;
@@ -25,3 +26,4 @@ function include(filename) {
   if (window.addEventListener) window.addEventListener('load', f, false);
   if (window.attachEvent) window.attachEvent('onload', f);
 }
+

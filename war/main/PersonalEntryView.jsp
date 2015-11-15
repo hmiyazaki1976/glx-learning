@@ -3,8 +3,8 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@taglib prefix="f" uri="http://www.slim3.org/functions"%>
 <c:import url="./template/layout.jsp">
-<c:param name="title" value="perEntry"/>
-<c:param name="content">
+  <c:param name="title" value="pEntry"/>
+  <c:param name="content">
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper" id="mainContent">
 		<!-- Main content -->
@@ -62,5 +62,7 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
-</c:param>
+  </c:param>
 </c:import>
+  
+	

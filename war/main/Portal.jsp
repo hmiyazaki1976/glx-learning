@@ -9,8 +9,8 @@
       <div class="content-wrapper" id="mainContent">
         <!-- Main content -->
         <section class="content">
-        
-        <jsp:include page="" flush="true" name="redirectName"/>
+        <p id="hoge">
+        </p>
         </section>
         <!-- /.content -->
       </div>

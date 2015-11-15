@@ -1,6 +1,5 @@
 <%@page pageEncoding="UTF-8" isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
@@ -52,6 +51,11 @@
   |---------------------------------------------------------|
   -->
   <body class="hold-transition skin-blue sidebar-mini">
+    <!-- site App -->
+    <script src="./js/common.js"></script>    
+    <script src="./js/topmenu.js"></script>
+    <script src="./js/sidemenu.js"></script>
+  
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
@@ -142,12 +146,10 @@
     <!-- AdminLTE App -->
     <script src="../../dist/js/app.min.js"></script>
 
-    <!-- site App -->
-    <script src="./js/topmenu.js"></script>
-    <script src="./js/sidemenu.js"></script>
+    
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the
          user experience. Slimscroll is required when using the
-         fixed layout. -->
+         fixed layout. -->     
   </body>
 </html>
